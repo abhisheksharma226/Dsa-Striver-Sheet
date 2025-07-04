@@ -15,7 +15,7 @@ public class second_largest {
     //     return second;
     // }
 
-    
+
     //optimal way
     public static int check(int arr[]){
         int largest = arr[0];
@@ -25,7 +25,7 @@ public class second_largest {
             if(arr[i] > largest){
                 slargest = largest;
                 largest = arr[i];
-            }else if(arr[i] > largest && arr[i] < slargest){
+            }else if(arr[i] < largest && arr[i] > slargest){
                 slargest = arr[i];
             }
         }
