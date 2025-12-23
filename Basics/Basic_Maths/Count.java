@@ -6,7 +6,7 @@ public class Count {
         int count = 0;
 
         while ( n > 0){
-            n = n / 10;
+            n = n / 10; //It is for getting the last Number
             count ++;
         }
 
