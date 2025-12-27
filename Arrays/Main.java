@@ -30,13 +30,36 @@ public class Main {
         return secondMax;
     }
 
+
+    //Array is Sorted or NOt
+    public static boolean SortedOrNot(int arr[]){
+        for(int i = 1 ; i < arr.length; i++){
+            if(arr[i] < arr[i-1]){ //If current element is small than previous one
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         // //Largest Element in Array
         // int arr[] = {6,386,3,9,1,66,3,0,1};
         // System.out.print(LargestElementInArray(arr));
 
-        //second largest element in arrya
-        int arr[] = {6,386,340,3,9,1,66,3,0,1};
-        System.out.print(SecondLargestElementInArray(arr));
+        // //second largest element in arrya
+        // int arr[] = {6,386,340,3,9,1,66,3,0,1};
+        // System.out.print(SecondLargestElementInArray(arr));
+    
+    
+        //SOrted or Not
+        int arr[] = {1,2,3,4,5,6,9,0};
+        if(SortedOrNot(arr)){
+            System.out.print("Yes");
+        }else{
+            System.out.print("not");
+
+        }
+    
+    
     }
 }
