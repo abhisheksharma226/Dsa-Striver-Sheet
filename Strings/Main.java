@@ -24,8 +24,29 @@ public class Main {
         return result;
     }
 
+
+    //Reverse Words in a String
+    public static String ReverseWords(String s){
+        String word[] = s.trim().split("\\s+");
+
+        StringBuilder sb = new StringBuilder();
+        for(int i = word.length-1; i >= 0; i --){
+            sb.append(word[i]);
+            if( i != 0) sb.append(" ");
+        }
+        return sb.toString();
+    }
+
+
+
     public static void main(String[] args) {
-        String s = "(()())(())";
-        System.out.print(RemoveOutermostParentheses(s));
+
+        // //REmove outer most parentheses
+        // String s = "(()())(())";
+        // System.out.print(RemoveOutermostParentheses(s));
+
+        //REvers words in string
+        String sentence = "I am from India";
+        System.out.print(ReverseWords(sentence));
     }
 }
